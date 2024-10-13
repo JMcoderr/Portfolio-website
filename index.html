@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jordy Meijer - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme) {
+                document.documentElement.classList.add(savedTheme + '-theme');
+            } else {
+                document.documentElement.classList.add('light-theme');
+            }
+        })();
+    </script>
+</head>
+<body>
+    <!-- Header section with navigation -->
+    <header>
+        <nav>
+            <!-- Profile image -->
+            <img src="images/profilepicture.jpg" alt="Jordy Meijer">
+            <!-- Your name -->
+            <h1>Jordy Meijer</h1>
+            <!-- Navigation links -->
+            <ul>
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="portfolio.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <!-- Theme toggle buttons -->
+            <div class="theme-toggle">
+                <button id="light-mode"><i class="fas fa-sun"></i></button>
+                <button id="dark-mode"><i class="fas fa-moon"></i></button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main content section -->
+    <main>
+        <!-- Home section -->
+        <section id="home">
+            <div class="home-content">
+                <div class="intro-text">
+                    <h1>I'm Jordy Meijer</h1>
+                    <h2>Software Developer</h2>
+                    <p>I'm a student at Windesheim Flevoland. I am 20 years old and I live in Almere. Thank you for visiting my portfolio website.</p>
+                    <!-- Button to view portfolio -->
+                    <a href="portfolio.html" class="view-portfolio-btn">View Portfolio</a>
+                </div>
+                <!-- New image -->
+                <img src="images/codepicture.jpg" alt="Code Picture" class="code-image">
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer section -->
+    <footer>
+        <p>&copy; 2024 Jordy Meijer. All rights reserved.</p>
+    </footer>
+
+    <!-- Link to external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>

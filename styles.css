@@ -1,0 +1,441 @@
+/* Define color variables for easy customization */
+:root {
+    --primary-color: #007BFF;
+    --secondary-color: #6C757D;
+    --background-color: #f9f9f9;
+    --text-color: #333;
+    --light-background-color: #fff;
+    --dark-background-color: #121212;
+    --dark-text-color: #e0e0e0;
+    --light-gradient: linear-gradient(135deg, #f9f9f9, #e0e0e0);
+    --dark-gradient: linear-gradient(135deg, #121212, #1e1e1e);
+}
+
+/* General styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    min-height: 100vh;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+    width: 250px;
+    background-color: var(--light-background-color);
+    color: var(--text-color);
+    padding: 20px;
+    position: fixed;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+nav img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+nav h1 {
+    margin: 0;
+    margin-bottom: 20px;
+    font-family: 'Georgia', serif;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+}
+
+nav ul li {
+    margin-bottom: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.theme-toggle {
+    margin-top: 20px;
+}
+
+.theme-toggle button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5em;
+    margin-right: 10px;
+    transition: color 0.3s;
+}
+
+.theme-toggle button:hover {
+    color: var(--primary-color);
+}
+
+main {
+    margin-left: 270px;
+    padding: 20px;
+    flex: 1;
+    background: var(--light-gradient);
+    transition: background 0.3s, color 0.3s;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: var(--light-background-color);
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Light theme styles */
+.light-theme {
+    --background-color: #f9f9f9;
+    --text-color: #333;
+    --light-background-color: #fff;
+    --light-gradient: linear-gradient(135deg, #f9f9f9, #e0e0e0);
+}
+
+.light-theme header,
+.light-theme footer,
+.light-theme main {
+    background-color: var(--light-background-color);
+    color: var(--text-color);
+}
+
+/* Dark theme styles */
+.dark-theme {
+    --background-color: #121212;
+    --text-color: #e0e0e0;
+    --light-background-color: #1e1e1e;
+    --dark-gradient: linear-gradient(135deg, #121212, #1e1e1e);
+}
+
+.dark-theme header,
+.dark-theme footer,
+.dark-theme main {
+    background-color: var(--light-background-color);
+    color: var(--text-color);
+    background: var(--dark-gradient);
+}
+
+/* Home content styles */
+.home-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.intro-text {
+    max-width: 100%;
+    flex: 1;
+    padding-right: 20px; /* Add some space between text and image */
+    text-align: center;
+}
+
+.intro-text h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.intro-text h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.intro-text p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.code-image {
+    max-width: 300px; /* Adjust the size as needed */
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    flex: 0 0 auto; /* Prevent the image from stretching */
+    margin-left: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* About Me styles */
+#about {
+    padding: 20px;
+}
+
+#about h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+#about p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Projects section styles */
+#portfolio {
+    padding: 20px;
+}
+
+.project {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: var(--light-background-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.project h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.project img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project p {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.project a {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 10px 20px;
+    font-size: 1em;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.light-theme .project a {
+    background-color: #fff;
+    color: #333;
+    border: 2px solid #333;
+}
+
+.light-theme .project a:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+.dark-theme .project a {
+    background-color: #333;
+    color: #e0e0e0;
+    border: 2px solid #e0e0e0;
+}
+
+.dark-theme .project a:hover {
+    background-color: #e0e0e0;
+    color: #333;
+}
+
+/* Contact form styles */
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: var(--light-background-color);
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+#contact-form label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+#contact-form input,
+#contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+#contact-form button {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+#contact-form button:hover {
+    background-color: #0056b3;
+}
+
+/* Dark theme contact form styles */
+.dark-theme #contact-form {
+    background-color: #1e1e1e;
+    border-color: #333;
+}
+
+.dark-theme #contact-form label {
+    color: #e0e0e0;
+}
+
+.dark-theme #contact-form input,
+.dark-theme #contact-form textarea {
+    background-color: #333;
+    color: #e0e0e0;
+    border-color: #555;
+}
+
+.dark-theme #contact-form input::placeholder,
+.dark-theme #contact-form textarea::placeholder {
+    color: #aaa;
+}
+
+/* View Portfolio button styles */
+.view-portfolio-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1em;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.light-theme .view-portfolio-btn {
+    background-color: #fff;
+    color: #333;
+    border: 2px solid #333;
+}
+
+.light-theme .view-portfolio-btn:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+.dark-theme .view-portfolio-btn {
+    background-color: #333;
+    color: #e0e0e0;
+    border: 2px solid #e0e0e0;
+}
+
+.dark-theme .view-portfolio-btn:hover {
+    background-color: #e0e0e0;
+    color: #333;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    header {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    nav {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+    }
+
+    nav ul li {
+        margin: 0 10px;
+    }
+
+    main {
+        margin-left: 0;
+        padding: 20px;
+    }
+
+    footer {
+        position: relative;
+    }
+
+    .home-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .intro-text {
+        max-width: 100%;
+        text-align: center;
+        padding-right: 0;
+    }
+
+    .code-image {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    .theme-toggle {
+        margin-top: 10px;
+    }
+}
