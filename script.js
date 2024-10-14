@@ -30,6 +30,27 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+// Hide the loading spinner once the page has fully loaded
+window.addEventListener('load', function() {
+    const loadingSpinner = document.getElementById('loading-spinner');
+    loadingSpinner.style.display = 'none';
+});
+
+// Show/hide back-to-top button
+window.addEventListener('scroll', function() {
+    const backToTopButton = document.getElementById('back-to-top');
+    if (window.scrollY > 300) {
+        backToTopButton.style.display = 'block';
+    } else {
+        backToTopButton.style.display = 'none';
+    }
+});
+
+// Scroll to top when the button is clicked
+document.getElementById('back-to-top').addEventListener('click', function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
 // Handle contact form submission
 document.getElementById('contact-form').addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent the default form submission
